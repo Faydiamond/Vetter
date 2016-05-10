@@ -1,0 +1,52 @@
+<ion-view view-title="Nueva maquina ">
+  <ion-content>
+
+    <ion-checkbox ng-model="filter.yellow">Cliente exístente</ion-checkbox>
+    <div class="list" ng-hide='filter.yellow'>
+      <!---------------------------------------------------------------------------------------------->
+
+      <!---------------------------------------------------------------------------------------------->
+      <label class="item item-input">
+        <span class="input-label">Cliente</span>
+        <input type="text" ng-model="mi.cliente" placeholder="Ingresa el nombre del cliente">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Telefono</span>
+        <input type="text" ng-model="mi.telefono" placeholder="ingresa el número de telefono">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Dirección</span>
+        <input type="text" ng-model="mi.direccion" placeholder="Ingresa la dirección">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Email</span>
+        <input type="text" ng-model="mi.email" placeholder="Ingresa elo email del cliente">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Número de la máquina</span>
+        <input type="text" ng-model='mi.nma' placeholder="Digita el número de la máquina">
+      </label>
+    </div>
+    <div class="list" ng-show='filter.yellow'>
+      <ion-list>
+        <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="campo in clientes">
+          <p>Cliente: {{campo.nombre}}</p>
+          <ion-option-button class="button button-outline button-positive">
+
+          </ion-option-button>
+        </ion-item>
+      </ion-list>
+      </ion-item>
+    </div>
+    <!------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------->
+    <br>
+    <br>
+    <!--Cliente Existente-->
+    <center>
+      <button class="button button-outline button-positive" ng-click="valida()">
+        Registrar
+      </button>
+    </center>
+  </ion-content>
+</ion-view>

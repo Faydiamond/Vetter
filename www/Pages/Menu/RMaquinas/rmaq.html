@@ -1,0 +1,18 @@
+<!--FRAME  CONSULTA  MÁQUINARIA-->
+<ion-view view-title="Consulta  máquinaria" hide-back-button='true'>
+  <ion-nav-buttons side="right">
+    <button class="button icon ion-ios-plus-outline" ng-click="numaqu()"></button>
+    <button class="button icon ion-gear-a"></button>
+  </ion-nav-buttons>
+  <ion-content>
+    <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="atributo in clima">
+        <p>Número de la  maquina:  {{atributo.num_maquina}}</p>                                         <!--// de la b.d-->
+        <p>Cliente: {{atributo.nombre}}</p>                                                             <!--// de la b.d-->
+        <ion-option-button class="button button-outline button-positive" ng-click="consulta(atributo.id_maquina)">
+          Revisión
+        </ion-option-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

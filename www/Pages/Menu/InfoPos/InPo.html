@@ -1,0 +1,22 @@
+<!--FRAME  INFO  EN  LA  POSICION-->
+<ion-view view-title="Espirales: ">
+  <ion-content>
+    <ion-list>
+      <ion-item class="card" ng-repeat="atributo in algo">
+        <p> Número del espiral: {{atributo.num_espiral}} </p>
+        <p>Nombre del producto: {{atributo.nombre}}</p>
+        <p> Cantidad actual: {{atributo.cantidad_actual}} </p>
+        <p>Valor: {{atributo.valor}}</p>
+        <ion-option-button class="button button-outline button-positive" ng-click="udespiral(atributo.id_espiral)">  <!--me traigo el id de la bd-->
+          Revision
+        </ion-option-button>
+      </ion-item>
+    </ion-list>
+    <center>
+      <button class="button button-outline button-positive">
+        Información Maquina
+      </button>
+    </center>
+    <br>
+  </ion-content>
+</ion-view>

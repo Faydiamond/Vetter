@@ -1,0 +1,11 @@
+<ion-view view-title="Infome">
+  <ion-content>
+    <div class="card">
+      <div class="item item-text-wrap" ng-repeat="enlazado in enlaza">
+        <h2>Atencion Quedan pocas unidades de:</h2>
+        <p>Producto : {{enlazado.nombre}} </p>
+        <p> Número del espiral : {{enlazado.num_espiral}}</p>
+        <p> Cantidad actual : {{enlazado.cantidad_actual}}</p>
+      </div>
+  </ion-content>
+</ion-view>
